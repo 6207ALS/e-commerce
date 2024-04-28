@@ -1,0 +1,8 @@
+extends layout
+
+block main
+  h1 History
+  each order in orders
+    input(type="hidden" name="orderId" value=order.id)
+    a(href=`/history/${order.id}`)
+      p=`Order #${order.id} | Date: ${order.created}`

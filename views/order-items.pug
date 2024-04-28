@@ -1,0 +1,11 @@
+extends layout
+
+block main
+  div.order-items
+      div.order-items_container
+        each item in orderItems
+          div.order-item
+            div.order-item_container
+              div.order-item_info
+                p=`${item.title}: $${item.price}`
+                p=`Quantity: ${item.quantity}`

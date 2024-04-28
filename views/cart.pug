@@ -1,0 +1,21 @@
+extends layout
+
+block main
+  h1.category_name Cart
+  div.cart-items
+    div.cart-items_container
+      if Object.keys(cartItems).length === 0
+        p Your cart is currently empty
+      else
+        each item in cartItems
+          div.cart-item
+            div.cart-item_container
+              div.cart-item_info
+                p=`${item.title}: $${item.price}`
+                p=`Quantity: ${cart[item.id]}`
+              form.delete-cart-item(action="/delete" method="POST")
+                input(type="hidden" name="itemId" value=item.id)
+                button(type="submit") Delete
+            
+
+            

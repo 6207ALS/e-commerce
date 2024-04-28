@@ -1,0 +1,31 @@
+extends layout
+
+block main
+    h1.category_name=categoryName
+    div.rows
+      div.rows_container
+        each row in items
+          div.row
+            div.row_container
+              each item in row
+                div.item
+                  p=`${item.title}: $${item.price}`
+                  form(action="/cart" method="POST")
+                    input(type="hidden" value=`${item.id}` name="itemId")
+                    select(name="itemQuantity")
+                      - for (let i = 1; i <= 10; i++) {
+                      option(value=`${i}`)=i
+                      - }
+                    button(type="submit") Add to Cart
+    div.pagination
+      a(href=`/categories/${categoryName}/${pageNumber === 1 ? 1 : pageNumber - 1}`) &#60;
+
+      - for (let i = 1; i <= pageCount; i++) {
+        if (i === +pageNumber)
+          a.active(href=`/categories/${categoryName}/${i}`)=i
+        else
+          a(href=`/categories/${categoryName}/${i}`)=i
+      - }
+
+      a(href=`/categories/${categoryName}/${pageNumber === pageCount ? pageCount : pageNumber + 1}`) &#62;
+    

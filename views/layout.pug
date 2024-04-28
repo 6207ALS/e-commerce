@@ -1,0 +1,25 @@
+doctype html
+
+html
+  head
+    title E-Commerce
+    link(rel="stylesheet" href="/stylesheets/app.css")
+  body
+    block header
+      a.company_title(href="/categories") E-Commerce
+    main
+      - let flashCategories = Object.keys(flash || {})
+      if flashCategories.length > 0
+        ul
+          each category in flashCategories
+            each message in flash[category]
+              li=message
+      div.main
+        div.main_container
+          block main
+    footer
+      if signedIn
+        div.sign-out_container
+          form(action="/signout" method="POST")
+            p Signed in as #{username}
+            button Sign out

@@ -1,0 +1,21 @@
+extends layout
+
+block main
+  h1.category_name Checkout
+  if Object.keys(cartItems).length === 0
+    p Your cart is currently empty.
+  else
+    form.checkout_items(action="/checkout" method="POST")
+      div.cart-items
+        div.cart-items_container
+          each item in cartItems
+            div.cart-item
+              div.cart-item_container
+                div.cart-item_info
+                  p=`${item.title}: $${item.price}`
+                  p=`Quantity: ${cart[item.id]}`
+                  input(type="hidden" name=item.id value=cart[item.id])
+      p=`Total: $${cartTotal}`
+      button(type="submit") Place Order
+    form(action="/categories" method="GET")
+      button(type="submit") Cancel

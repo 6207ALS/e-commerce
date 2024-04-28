@@ -1,0 +1,15 @@
+extends layout
+
+block main 
+  div.options_container
+    a(href="/cart")
+      p Cart
+    a(href="/checkout")
+      p Checkout
+    a(href="/history")
+      p History
+    
+  div.categories_container
+    each category in categories
+      a(href=`/categories/${category.title}/1`)
+        p=category.title

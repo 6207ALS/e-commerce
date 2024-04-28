@@ -1,0 +1,152 @@
+.cart-item,
+.order-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.cart-item_container,
+.order-item_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cart-item_info, 
+.order-item_info {
+  display: flex;
+  flex-direction: row;
+  min-width: 270px;
+  justify-content: space-between;
+}
+
+.cart-items,
+.order-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-items_container, 
+.order-items_container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  align-content: center;
+}
+
+.categories_container {
+  background-color: rgba(0, 0, 255, 0.346);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.categories_container a {
+  margin: 20px;
+  text-decoration: none;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.category_name {
+  text-align: center;
+}
+
+.checkout_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company_title {
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.delete-cart-item {
+  margin-left: 50px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.options_container {
+  background-color: rgba(255, 255, 0, 0.362);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.options_container a {
+  margin: 20px 20px;
+  text-decoration: none;
+}
+
+.order-form {
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pagination a {
+  margin: 20px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: rgba(255, 192, 203, 0.634);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.row_container {
+  background-color: rgba(0, 128, 0, 0.159);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.rows_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-out_container {
+  position: absolute;
+  top: 90vh;
+}
+
+.item {
+  width: 300px;
+  background-color: skyblue;
+  margin: 20px;
+  text-align: center;
+}
+

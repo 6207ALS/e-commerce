@@ -1,0 +1,15 @@
+extends layout
+
+block main
+  h1 Sign in
+  form(action="/signin" method="POST")
+    div
+      label(for="username") Username:
+      input(type="text" name="username" value= username || "")
+
+    div
+      label(for="password") Password:
+      input(type="password" name="password")
+
+    div
+      input(type="submit" value="Sign In")
